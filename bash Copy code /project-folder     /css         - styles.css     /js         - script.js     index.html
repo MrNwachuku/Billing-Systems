@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing System</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Billing System</div>
+        <div class="user-profile">
+            <span>Username</span>
+            <div class="dropdown">
+                <button class="dropdown-toggle">Account</button>
+                <div class="dropdown-content">
+                    <a href="#">Settings</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="filter-bar">
+            <div class="lifecycle-toggle">
+                <button class="tab active" onclick="changeLifecycle('pending')">Pending</button>
+                <button class="tab" onclick="changeLifecycle('paid')">Paid</button>
+                <button class="tab" onclick="changeLifecycle('overdue')">Overdue</button>
+                <button class="tab" onclick="changeLifecycle('canceled')">Canceled</button>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by invoice ID or customer name">
+            </div>
+        </section>
+
+        <section class="billing-table">
+            <table id="invoiceTable">
+                <thead>
+                    <tr>
+                        <th>Invoice ID</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="invoiceData">
+                    <!-- JavaScript will populate this data -->
+                </tbody>
+            </table>
+        </section>
+
+        <aside class="payment-summary">
+            <h3>Payment Summary</h3>
+            <p>Total Pending: $0</p>
+            <p>Total Paid This Month: $0</p>
+            <p>Overdue Payments: $0</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Billing System</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
